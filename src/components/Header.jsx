@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { FiSend } from 'react-icons/fi';
-import Logo from '../assets/fulltextLogo.png';
+import Logo from '../assets/fullTextLogo.png';
 import ScrolledLogo from '../assets/logo.png'; // <- Add second logo
-
+     
 const Header = () => {
   const [fly, setFly] = useState(false);
   const [scrolled, setScrolled] = useState(false);

@@ -14,7 +14,7 @@ const socialLinks = [
       icon: FaFacebook,
       link: "https://facebook.com/biteglitz",
       color: "#1877F2", // Facebook blue
-    },
+    }, 
     {
       icon: FaInstagram,
       link: "https://instagram.com/biteglitz",
