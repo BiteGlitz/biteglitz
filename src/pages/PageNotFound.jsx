@@ -30,7 +30,7 @@ const PageNotFound = () => {
       </motion.a>
     </div>
   );
-};
+}; 
 
 const styles = {
   container: {
