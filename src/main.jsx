@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route element={<LayoutWrapper />}>
             <Route path="*" element={<PageNotFound />} />
             <Route path="/" element={<Home />} />
-            <Route path="about" element={<ComingSoon />} />
+            {/* <Route path="about" element={<ComingSoon />} /> */}
             <Route path="contact" element={<ComingSoon />} />
             <Route path="games" element={<ComingSoon />} />
             <Route path="projects" element={<ComingSoon />} />
