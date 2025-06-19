@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import BGLogo from '../../assets/logoT.png'; 
 import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
@@ -23,19 +23,30 @@ const socialLinks = [
     {
       icon: FaEnvelope,
       link: "mailto:biteglitz@gmail.com",
-      color: "#3C29EEFF", // Gmail red
+      color: "red", // Gmail red
+    },
+    {
+      icon: FaTwitter,
+      link: "https://x.com/BiteGlitz",
+      color: "#1877F2", // Gmail red
     },
   ];
-const Hero = () => {
+const Hero = ({ scrollContainerRef }) => {
     const navigate = useNavigate();
     const handleScroll = () => {
-        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
-      };
+        if (scrollContainerRef?.current) {
+        scrollContainerRef.current.scrollTo({
+          top: scrollContainerRef.current.offsetHeight,
+          behavior: "smooth",
+        });
+      }
+    };
   return (
     <div
       style={{
         position: 'relative',
         minHeight: '100vh',
+        width: '100%',
         backgroundColor: '#bdbdbd',
         overflow: 'hidden',
         padding: '4rem 2rem',
@@ -144,12 +155,12 @@ const Hero = () => {
     style={{
       position: "absolute",
       right: "2rem",
-      top: "40%",
+      top: "30%",
       transform: "translateY(-50%)",
       display: "flex",
       flexDirection: "column",
       gap: "1.5rem",
-      zIndex: 999,
+      zIndex: 20,
     }}
   >
     {socialLinks.map(({ icon: Icon, link, color }, index) => (

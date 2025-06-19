@@ -22,6 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/first-load" element={<FirstLoad />} />
           <Route element={<LayoutWrapper />}>
+            <Route path="*" element={<PageNotFound />} />
             <Route path="/" element={<Home />} />
             <Route path="about" element={<ComingSoon />} />
             <Route path="contact" element={<ComingSoon />} />
@@ -31,7 +32,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="resume" element={<ComingSoon />} />
             <Route path="skills" element={<ComingSoon />} />
             <Route path="services" element={<ComingSoon />} />
-            <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
